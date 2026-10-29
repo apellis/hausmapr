@@ -1,0 +1,40 @@
+# Reference measurements for one room. Copy to <room id>.yaml.
+# Each measurement has two passes; `hausmapr reference check` compares them.
+room: guest_room
+units: mm            # mm or in
+measured_by: ""
+dates: []            # e.g. [2026-11-01, 2026-11-02]
+
+walls:               # corner-to-corner at floor level
+  C1-C2: [null, null]
+  C2-C3: [null, null]
+  C3-C4: [null, null]
+  C4-C1: [null, null]
+
+diagonals:
+  C1-C3: [null, null]
+  C2-C4: [null, null]
+
+ceiling_height:
+  centre: [null, null]
+  near_C1: [null, null]
+  near_C3: [null, null]
+
+openings:
+  - id: door_main
+    kind: door       # door, window or opening
+    wall: C1-C2
+    from_corner: C1  # corner the offset is measured from
+    offset: [null, null]
+    width: [null, null]
+    height: [null, null]
+  - id: window_1
+    kind: window
+    wall: C2-C3
+    from_corner: C2
+    offset: [null, null]
+    width: [null, null]
+    height: [null, null]
+    sill: [null, null]
+
+features: []         # e.g. {id: closet, width: [..], depth: [..], height: [..]}

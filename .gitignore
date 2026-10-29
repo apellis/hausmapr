@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+# Photos and reconstructions stay out of git
+data/captures/
+data/outputs/
