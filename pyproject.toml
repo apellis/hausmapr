@@ -1,0 +1,24 @@
+[project]
+name = "hausmapr"
+version = "0.0.1"
+description = "Phone photos of a home interior to a measured 3D model and design-build deliverables"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "pyyaml",
+    "opencv-python-headless>=4.7",
+    "pillow",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+hausmapr = "hausmapr.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["hausmapr"]
